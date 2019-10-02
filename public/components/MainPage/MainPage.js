@@ -1,5 +1,3 @@
-//  const mainPageTemplate = require('./MainPage.html');
-
 export class MainPageComponent {
 	constructor(data = {}, parent = document.body) {
 		this._data = data;
@@ -24,15 +22,6 @@ export class MainPageComponent {
 
 	renderMainPage() {
         // this._parent.innerHTML += bodyTemplate(this._data);
-        
-        // var theScriptHTML = document.getElementById('getting').innerHTML;
-        // var theScriptHTML = mainPageTemplate;
-        // var theTemplate = Handlers.compile(theScriptHTML);
-        // var contexObj = {name: "Maga"}
-        // var compileData = theTemplate(contexObj);
         console.log("MainPagerender")
-        var div = document.createElement('div')
-        div.innerHTML = "HERE WILL BE MAINPAGE"
-        this._parent.appendChild(div)
 	}
 }
