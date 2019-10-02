@@ -1,4 +1,4 @@
- const mainPageTemplate = require('./MainPage.html');
+//  const mainPageTemplate = require('./MainPage.html');
 
 export class MainPageComponent {
 	constructor(data = {}, parent = document.body) {
@@ -26,13 +26,13 @@ export class MainPageComponent {
         // this._parent.innerHTML += bodyTemplate(this._data);
         
         // var theScriptHTML = document.getElementById('getting').innerHTML;
-        var theScriptHTML = mainPageTemplate;
-        var theTemplate = Handlers.compile(theScriptHTML);
-        var contexObj = {name: "Maga"}
-        var compileData = theTemplate(contexObj);
-
-        var a = document.createElement('a')
-        a.innerHTML = "aaaaaaaaAAAAAaaaaa"
-        this._parent.innerHTML += a;
+        // var theScriptHTML = mainPageTemplate;
+        // var theTemplate = Handlers.compile(theScriptHTML);
+        // var contexObj = {name: "Maga"}
+        // var compileData = theTemplate(contexObj);
+        console.log("MainPagerender")
+        var div = document.createElement('div')
+        div.innerHTML = "HERE WILL BE MAINPAGE"
+        this._parent.appendChild(div)
 	}
 }

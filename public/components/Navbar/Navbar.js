@@ -1,4 +1,4 @@
-const mainPageTemplate = require('./Navbar.html');
+// const mainPageTemplate = require('./Navbar.html');
 export class Navbar {
 	constructor(data = {}, parent = document.body) {
 		this._data = data;
@@ -21,8 +21,12 @@ export class Navbar {
 		this._parent = parent;
 	}
 	renderHeader(isAuthenticated) {
-		this._parent.innerHTML = '';
-		this._data["login"] = isAuthenticated;
-		this._parent.innerHTML = navbarTemplate(this._data);
+        console.log("headerrender")
+        var div = document.createElement('div')
+        div.innerHTML = "HERE WILL BE HEADER"
+        this._parent.appendChild(div)
+		// this._parent.innerHTML = '';
+		// this._data["login"] = isAuthenticated;
+		// this._parent.innerHTML = navbarTemplate(this._data);
 	}
 }

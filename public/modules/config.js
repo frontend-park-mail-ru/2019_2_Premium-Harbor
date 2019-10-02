@@ -1,5 +1,5 @@
 const settings = {
-    backend: 'https://stark-river-97084.herokuapp.com/api/v1/user/list',
+    backend: 'http://localhost:3000',
 };
 
 export default settings;

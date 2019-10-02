@@ -1,12 +1,11 @@
 'use strict';
 
-import createMainPage from './modules/mainPage';
+//import createMainPage from './modules/mainPage.js';
+import createMainPage from './modules/mainPage.js'
 // import createSignUp from './modules/signup';
 // import createLogin from './modules/login';
 // import createProfile from './modules/profile';
 // import handleLogout from './modules/logout';
-
-import '../style/main.css';
 
 const application = document.getElementById('application');
 const functions = {
@@ -26,9 +25,9 @@ application.addEventListener('click', function (evt) {
 	}
 });
 
-function init() {
-	createMainPage(application);
-}
+
+createMainPage(application);
+
 
 
 

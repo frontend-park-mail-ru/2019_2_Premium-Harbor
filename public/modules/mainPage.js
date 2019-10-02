@@ -1,6 +1,6 @@
-import {Navbar} from '../components/Navbar/Navbar';
-import {MainPageComponent} from '../components/MainPage/MainPage';
-import settings from './config';
+import {Navbar} from '../components/Navbar/Navbar.js';
+import {MainPageComponent} from '../components/MainPage/MainPage.js';
+import settings from './config.js';
 
 const {backend} = settings;
 
@@ -9,13 +9,16 @@ function createMainPage(application) {
 	fetch(`${backend}/`, {
 		method: 'GET',
 		credentials: 'include',
-		mode: 'cors',
 	}).then(response => {
-		application.innerHTML = '';
+        application.innerHTML = '';
+        
+        // var a = document.createElement('div')
+        // a.innerHTML = "aaaaaaaaAAAAAaaaaa"
+        // this._parent.innerHTML += a;
 
 		const navbar = new Navbar();
 		navbar.parent = application;
-		navbar.renderNavbar(response.status === 200);
+		navbar.renderHeader(response.status === 200);
 
 		const mainPage = new MainPageComponent();
 		mainPage.parent = application;
